@@ -1,0 +1,303 @@
+
+/*  Developer - Santhosh Kumar Chitikila
+    Date - 15/08/2024
+    Happy Independence Day
+*/
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: Century Gothic, "Roboto", sans-serif;
+    background-color: #111827;
+    color: #f3f4f6;
+    line-height: 1.6;
+  }
+  
+  header {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0 0 0 120px;
+    height: 120px;
+  }
+  footer {
+    position: relative;
+    background: #ffffff;
+    border-radius: 0 120px 0 0;
+    height: 120px;
+  }
+  
+  
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 50px;
+  }
+  
+  .timeline-item {
+    text-align: center;
+  }
+  
+  .circle {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 0 20px 0;
+    border-radius: 50%;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .circle span.year-dot {
+    position: absolute;
+    top: 55%;
+    left: 120%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #d1d5db;
+  }
+  
+  .circle span.year-dot .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .green {
+    background: #22a75d;
+    box-shadow: 0px 15px 25px 0px #22a75d40;
+  }
+  .blue {
+    background: #2278d4;
+    box-shadow: 0px 15px 25px 0px #2278d440;
+  }
+  .yellow {
+    background: #FFD100;
+    box-shadow: 0px 15px 25px 0px #FFD10040;
+  }
+  .red {
+    background: #E20613;
+    box-shadow: 0px 15px 25px 0px #E2061340;
+  }
+  
+  /* Color the dots based on the circle color */
+  .dot.green {
+    background-color: #10b981;
+  }
+  .dot.blue {
+    background-color: #3b82f6;
+  }
+  .dot.yellow {
+    background-color: #f59e0b;
+  }
+  .dot.red {
+    background-color: #ef4444;
+  }
+  
+  .timeline-item ol {
+    padding-left: 0;
+    font-size: 14px;
+    color: #d1d5db;
+    text-align: left;
+  }
+  
+  .timeline-item ol li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .about-company {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .about-company .about {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .about-company .about img.logo {
+    margin-right: 20px;
+  }
+  
+  .about-company .content {
+    flex: 1;
+    max-width: 500px;
+    margin-right: 20px;
+  }
+  
+  .about-company h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .about-company p {
+    margin-bottom: 20px;
+  }
+  
+  .about-company .read-more {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #10b981;
+    border: 2px solid #10b981;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .about-company .read-more:hover {
+    background-color: #10b981;
+    color: #111827;
+  }
+  
+  .about-company .image {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+  }
+  
+  .about-company .image img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+  
+  .about-company .blue-box {
+    width: 400px;
+    height: 500px;
+    border-radius: 5%;
+    position: absolute;
+    right: 55px;
+    top: 582px;
+    background-color: white;
+    background-image: linear-gradient(cyan, blue);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .timeline {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .about-company {
+      flex-direction: column;
+      padding: 20px;
+      position: relative;
+    }
+  
+    .about-company .about {
+      margin-bottom: 20px;
+    }
+  
+    .about-company .content,
+    .about-company .image {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .about-company .blue-box {
+      width: 100%;
+      height: auto;
+      right: 0;
+      top: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .timeline {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-company {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .about-company .about {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .about-company .content,
+    .about-company .image {
+      max-width: 100%;
+      margin: 0;
+    }
+  
+    .about-company .blue-box {
+      width: 100%;
+      height: auto;
+      right: 0;
+      top: 20px;
+    }
+  }
+  
+  /* iOS specific */
+  @supports (-webkit-overflow-scrolling: touch) {
+    .about-company .image img {
+      -webkit-transform: translateZ(0);
+      transform: translateZ(0);
+    }
+  }
+  
+  ol { 
+      counter-reset: item; 
+  }
+  
+  ol li { 
+      display: block; 
+      position: relative;
+      padding-left: 20px;
+  }
+  
+  ol li:before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      position: absolute;
+      left: 0;
+  }
+  
+  /* Color the numbers based on the li class */
+  ol li.green-li:before {
+      color: #22a75d;
+  }
+  
+  ol li.blue-li:before {
+      color: #2278d4;
+  }
+  
+  ol li.yellow-li:before {
+      color: #FFD100;
+  }
+  
+  ol li.red-li:before {
+      color: #E20613;
+  }
+  
